@@ -25,8 +25,7 @@ class FootballTeam:
         for player in self.players:
             if player["shirt_number"] == shirt_number:
                 self.players.remove(player)
-                print(f'{player["name"]} has successfuly been deleted. ')
-                return
+                return f'{player["name"]} has successfuly been deleted. '
             
         print(f'player with number {shirt_number} not found.')
 
@@ -35,14 +34,13 @@ class FootballTeam:
         for player in self.players:
             if player["shirt_number"] == shirt_number:
                 player.update(kwargs)
-                print(f"{player["name"]}'s data has been updated!")
-                return
-    
+                return f"{player["name"]}'s data has been updated!"
+     
     # 4. კლუბის ინფორმაციის ჩვენება
     def club_info(self):
         print(f'Club name - {self.team_name}\nCoach - {self.coach}\n')
         player_list = [player["name"] for player in self.players]
-        print(f'Player list: {player_list}')
+        return f'Player list: {player_list}'
 
 
 
